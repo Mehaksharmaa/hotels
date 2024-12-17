@@ -1,11 +1,11 @@
 // this file will be responsible for making database connection
 const mongoose = require('mongoose');
-const mongoURL = 'mongodb://localhost:27017/hotels';
+require('dotenv').config();
+// const mongoURL = process.env.MONGODB_URL_LOCAL;
+const mongoURL =process.env.MONGODB_URL;
 
 // ye jo likha hai niche, usse hoga connection establish krne ke liye URL likha hai, ye required parameter jo pass krna hi pdega
 mongoose.connect(mongoURL,{
-     
-
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

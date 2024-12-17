@@ -1,2 +1,3 @@
 # ignoring the git  modules directory
 node_modules/
+.env
